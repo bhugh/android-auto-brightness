@@ -1,8 +1,10 @@
 
 Android Auto Brightness - a small app to automatically adjust the Android display brightness. 
 
-Available as s self-standing Android app, or as a Tasker project. 
+Available as a self-standing Android app OR as a Tasker project.
 
+![Screenshot_20191012-151617_Display_Brightness](https://user-images.githubusercontent.com/2321668/66707495-ffe07e80-ed06-11e9-8458-62b250d9351b.png)
+ 
 Is Android's Adaptive Screen Brightness driving you crazy? 
 
 Here is a simple replacement system that runs as a small self standing app or in Tasker. 
