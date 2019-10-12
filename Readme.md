@@ -9,11 +9,11 @@ Is Android's Adaptive Screen Brightness driving you crazy?
 
 Here is a simple replacement system that runs as a small self standing app or in Tasker. 
 
-It automatically sets display brightness based on ambient light and continually auto-updates it every few seconds. 
+It automatically sets display brightness based on ambient light and continually auto-updates as long as the screen is on. 
 
 It includes a simple slider to manually tweak the auto settings to be a bit brighter or darker. 
 
-Can be installed as a Quick Settings Tile (just click the easy auto-install button). 
+Can be installed as a Quick Settings Tile (just click the easy auto-install button, then follow the instructions). 
 
 Normally the project is run via the Quick Settings Tile and/or a Tasker Widget on the home screen set to run task "Display Brightness Slider". 
 
