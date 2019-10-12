@@ -31,4 +31,4 @@ App made with Tasker.
 
 Save and restore variables routines by u/Ratchet_Guy at r/tasker on Reddit.
 
-Icon from IPACK - Crystal Project. Designer: Everaldo Coelho [http://www.everaldo.com]
+Icon from IPACK - Crystal Project. Designer: Everaldo Coelho [http://www.everaldo.com]. In the Play Store at https://play.google.com/store/apps/details?id=net.dinglisch.android.ipack.crystalhd
