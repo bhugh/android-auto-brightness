@@ -27,6 +27,14 @@ The project will display notifications and a small toast message every time it c
 
 OTHER SETTINGS
 In Settings, you can set min and max brightness values and tweak the overall brightness curve as needed for your device, or turn the whole system on or off. 
+
+PERMISSIONS REQUESTED & NEEDED
+* Modifying System Settings - the brightness level is considered a "system setting" so this is necessary for the core function of the app
+* Storage - needed to save & retrieve settings
+* Calendar - this app is made with Tasker, and the app uses a Tasker function that **could** request calendar access.  So Tasker auto-includes the read/write Calendar permission. However, Display Brightness does not actually access the Calendar and you don't need to give it this permission at all.
+
+RUNNING AS A TASKER PROJECT
+For this already running Tasker, the app is also available as a Tasker project--it will run within Tasker, rather than as a standalone app.
  
 Version 2.02
 
