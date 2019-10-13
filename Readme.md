@@ -16,15 +16,15 @@ It includes a simple slider to manually tweak the auto settings to be a bit brig
 RUN VIA QUICK SETTINGS
 You can pop up the slider to adjust the brightness by placing the app on the home screen OR by using a Quick Settings Tile.
 
-LOW BATTERY USAGE
-The app uses little or no noticeable amount of battery. Overall, you can save quite a bit of by keeping your display brightness close to the optimal level.
+LOW BATTERY USAGE/BATTERY SAVINGS
+The app uses little or no noticeable amount of battery. Overall, you can save quite a bit of battery by keeping your display brightness close to the optimal level.
 
 NOTIFICATIONS, SETTINGS, AND OPTIONS
 The project can display notifications and/or a small toast message every time it changes the brightness level.
 
 These are useful when first calibrating the app and can easily be turned off via the Settings menu when no longer needed.
 
-In Settings, you can set min and max brightness values, tweak the overall brightness curve as needed for your device, choose or disable the shake action, change the time between brightness updates, and enable or disable the auto brightness system entirely. 
+In Settings, you can set min and max brightness values, tweak the overall brightness curve as needed for your device, choose the shake action (or disable it), change the time between brightness updates, and enable or disable the auto brightness system entirely. 
 
 PERMISSIONS REQUESTED & NEEDED
 * Modifying System Settings - the brightness level is considered a "system setting". So the "modify system settings" permission is necessary for the core function of the app
