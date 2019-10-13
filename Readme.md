@@ -9,34 +9,32 @@ Is Android's Adaptive Screen Brightness driving you crazy?
 
 Here is a simple replacement app.
 
-It automatically sets display brightness based on ambient light and auto-updates it every few seconds. (You can set the update Interval as long or short as you like.)
+It automatically sets display brightness based on ambient light and auto-updates it every few seconds. You can set the update Interval as long or short as you like.
 
-It includes a simple slider to manually tweak the auto settings to be a bit brighter or darker.
+It includes a simple slider to manually tweak the auto settings to be a bit brighter or darker and an option to use a simple shake gesture to quickly switch between low, medium, and high brightness. 
 
 RUN VIA QUICK SETTINGS
 You can pop up the slider to adjust the brightness by placing the app on the home screen OR by using a Quick Settings Tile.
 
-SHAKE SOME SENSE INTO YOUR PHONE
-Additionally you can shake your device to re-adjust the brightness - useful in situations where the light level has changed and you can't read the screen.
+LOW BATTERY USAGE
+The app uses little or no noticeable amount of battery. Overall, you can save quite a bit of by keeping your display brightness close to the optimal level.
 
-LITTLE BATTERY USAGE
-The project uses little or no noticeable amount of battery.
+NOTIFICATIONS, SETTINGS, AND OPTIONS
+The project can display notifications and/or a small toast message every time it changes the brightness level.
 
-NOTIFICATIONS - TURN OFF WHEN NOT NEEDED
-The project will display notifications and a small toast message every time it changes the brightness level. This is useful when first calibrating the app but quickly becomes annoying. Simply go to the Settings menu and turn notification and/or toast message off when you don't need them.
+These are useful when first calibrating the app and can easily be turned off via the Settings menu when no longer needed.
 
-OTHER SETTINGS
-In Settings, you can set min and max brightness values and tweak the overall brightness curve as needed for your device, or turn the whole system on or off. 
+In Settings, you can set min and max brightness values, tweak the overall brightness curve as needed for your device, choose or disable the shake action, change the time between brightness updates, and enable or disable the auto brightness system entirely. 
 
 PERMISSIONS REQUESTED & NEEDED
-* Modifying System Settings - the brightness level is considered a "system setting" so this is necessary for the core function of the app
+* Modifying System Settings - the brightness level is considered a "system setting". So the "modify system settings" permission is necessary for the core function of the app
 * Storage - needed to save & retrieve settings
-* Calendar - this app is made with Tasker, and the app uses a Tasker function that **could** request calendar access.  So Tasker auto-includes the read/write Calendar permission. However, Display Brightness does not actually access the Calendar and you don't need to give it this permission at all.
+* Calendar - this app is made with Tasker, and the app uses a Tasker function that **could** request calendar access.  So Tasker auto-includes the read/write Calendar permission and, unfortunately, the app author cannot remove the request for this permission. However, Display Brightness does not actually access the Calendar and you don't need to give it this permission at all.  It will never actively ask for this permission but you will see it listed if you view the app in Android Settings.
 
 RUNNING AS A TASKER PROJECT
-For this already running Tasker, the app is also available as a Tasker project--it will run within Tasker, rather than as a standalone app.
+For those already running Tasker, the app is also available as a Tasker project--it will run within Tasker, rather than as a standalone app.  For everyone else, it is a standalone, installable Android app (.apk file).
  
-Version 2.02
+Version 2.10
 
 ACKNOWLEDGEMENTS
 
