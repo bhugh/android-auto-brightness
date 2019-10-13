@@ -3,6 +3,7 @@
 	<Profile sr="prof100" ve="2">
 		<cdate>1570915999411</cdate>
 		<cldm>60</cldm>
+		<clp>true</clp>
 		<edate>1570957122399</edate>
 		<flags>1</flags>
 		<id>100</id>
@@ -50,17 +51,18 @@
 	</Profile>
 	<Profile sr="prof43" ve="2">
 		<cdate>1569967098816</cdate>
-		<clp>true</clp>
-		<edate>1570957121848</edate>
+		<edate>1570995227786</edate>
+		<flags>1</flags>
 		<id>43</id>
-		<mid0>42</mid0>
-		<nme>DB Display Brightness Shake_DB</nme>
+		<limit>true</limit>
+		<mid0>45</mid0>
+		<nme>DB Shake Reset_DB</nme>
 		<Event sr="con0" ve="2">
 			<code>3001</code>
 			<pri>0</pri>
 			<Int sr="arg0" val="0"/>
-			<Int sr="arg1" val="2"/>
-			<Int sr="arg2" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="2"/>
 		</Event>
 		<State sr="con1" ve="2">
 			<code>123</code>
@@ -70,7 +72,7 @@
 	<Profile sr="prof78" ve="2">
 		<cdate>1570860162193</cdate>
 		<clp>true</clp>
-		<edate>1570958334624</edate>
+		<edate>1570989149451</edate>
 		<flags>1</flags>
 		<id>78</id>
 		<limit>true</limit>
@@ -87,7 +89,7 @@
 	<Profile sr="prof84" ve="2">
 		<cdate>1570860162193</cdate>
 		<clp>true</clp>
-		<edate>1570958178945</edate>
+		<edate>1570995024219</edate>
 		<flags>1</flags>
 		<id>84</id>
 		<limit>true</limit>
@@ -101,33 +103,52 @@
 			<tm>59</tm>
 		</Time>
 	</Profile>
+	<Profile sr="prof87" ve="2">
+		<cdate>1569967098816</cdate>
+		<edate>1570995219126</edate>
+		<flags>1</flags>
+		<id>87</id>
+		<mid0>89</mid0>
+		<nme>DB Shake Cycle_DB</nme>
+		<Event sr="con0" ve="2">
+			<code>3001</code>
+			<pri>0</pri>
+			<Int sr="arg0" val="0"/>
+			<Int sr="arg1" val="2"/>
+			<Int sr="arg2" val="2"/>
+		</Event>
+		<State sr="con1" ve="2">
+			<code>123</code>
+			<Int sr="arg0" val="1"/>
+		</State>
+	</Profile>
 	<Project sr="proj0" ve="2">
 		<cdate>1570347226810</cdate>
 		<name>Display Brightness</name>
-		<pids>78,84,100,39,41,43</pids>
-		<scenes>DB Settings Screen,HTML Popup-DB,Variable Query,Display Brightness</scenes>
-		<tids>105,109,85,358,107,99,45,61,101,77,106,46,112,76,63,102,104,90,64,75,108,73,65,44,98,62,114,113,88,42,86,115,83,59,103,40,60,47,79,92</tids>
+		<pids>87,43,78,39,100,84,41</pids>
+		<scenes>Variable Query,HTML Popup-DB,Display Brightness,DB Settings Screen</scenes>
+		<tids>42,85,83,108,103,93,81,90,358,63,65,98,73,99,77,112,76,105,107,59,75,101,113,62,114,115,61,64,102,109,92,45,106,91,44,104,82,86,46,40,89,88,47,60,79,80</tids>
 		<Kid sr="Kid">
 			<feat0>android.hardware.sensor.accelerometer:n</feat0>
 			<launchID>61</launchID>
 			<pkg>bbjproductions.com.android.auto_brightness</pkg>
 			<vTarg>28</vTarg>
-			<vnme>2.02</vnme>
-			<vnum>27</vnum>
+			<vnme>2.10</vnme>
+			<vnum>31</vnum>
 		</Kid>
 		<Share sr="Share">
-			<d>Auto display brightness (project).
+			<d>Simple Display Brightness (project).
 
 Is Android's Adaptive Screen Brightness driving you crazy? 
 
 Here is a simple replacement system that runs in Tasker. 
 
-It automatically sets display brightness based on ambient light and auto-updates it every few seconds. You can set the update Interval as long it short as you like. 
+It automatically sets display brightness based on ambient light and auto-updates it every few seconds. You can set the update Interval as long or short as you like. 
 
-It includes a simple slider to manually tweak the auto settings to be a bit brighter or darker. 
+It includes a simple slider to manually tweak the auto settings to be a bit brighter or darker and an option to use a simple shake gesture to quickly switch between low, medium, and high brightness. 
 
 RUN VIA QUICK SETTINGS
-Can be installed as a Quick Settings Tile (just click the easy auto-install button). 
+Simple Display Brightness can be controlled via a Quick Settings Tile (just click the easy Quick Settings auto-install button under Settings). 
 
 Normally the project is run via the Quick Settings Tile and/or a Tasker Widget on the home screen set to run task "Display Brightness Slider". 
 
@@ -135,17 +156,21 @@ OR VIA 3 HOMESCREEN WIDGETS
 Instead of, or in addition to, the slider menu, you can set up 3 homescreen Tasker widgets to run tasks "Display Brightness Low", "Display Brightness Medium", and "Display Brightness High" for quick access to those settings. 
 
 SHAKE SOME SENSE INTO YOUR PHONE 
-Additionally you can shake your device to auto-run Display Brightness Medium - useful in situations where the light level has changed and you can't read the screen. 
+Additionally you can shake your device to cycle between low-medium-high brightness OR (at your choice) reset the brightness. 
+
+Usually a shake or two is all you need to get the right level of brightness. 
 
 LITTLE BATTERY USAGE 
 The project uses little or no noticeable amount of battery. 
 
 NOTIFICATIONS - TURN OFF WHEN NOT NEEDED 
-The project will display notifications and a small toast message every time it changes the brightness level. This is useful when first calibrating the app but quickly becomes annoying. Simply go to the Settings menu and turn notification and/or toast message off.
+The project can display notifications and/or a small toast message every time it changes the brightness level. 
 
-In Settings, you can set min and max brightness values and tweak the overall brightness curve as needed for your device. 
+These are useful when first calibrating the app and can easily be turned off via the Settings menu when no longer needed. quickly becomes annoying.
 
-Version 2.02</d>
+In Settings, you can set min and max brightness values, tweak the overall brightness curve as needed for your device, choose or disable the shake action, and enable or disable the auto brightness system entirely. 
+
+Version 2.10</d>
 			<t>Display Brightness Slider</t>
 		</Share>
 		<Img sr="icon" ve="2">
@@ -155,12 +180,12 @@ Version 2.02</d>
 	</Project>
 	<Scene sr="sceneDB Settings Screen">
 		<cdate>1568074050642</cdate>
-		<edate>1570958309420</edate>
+		<edate>1570994714348</edate>
 		<gridSize>10</gridSize>
-		<heightLand>-1</heightLand>
+		<heightLand>980</heightLand>
 		<heightPort>980</heightPort>
 		<nme>DB Settings Screen</nme>
-		<widthLand>-1</widthLand>
+		<widthLand>702</widthLand>
 		<widthPort>702</widthPort>
 		<ImageElement sr="elements0" ve="2">
 			<flags>6</flags>
@@ -195,6 +220,32 @@ Version 2.02</d>
 			<Int sr="arg8" val="0"/>
 		</TextElement>
 		<TextElement sr="elements10" ve="3">
+			<clickTask>88</clickTask>
+			<flags>4</flags>
+			<geom>487,879,214,101,29,353,642,222</geom>
+			<Str sr="arg0" ve="3">Close Settings Text</Str>
+			<Str sr="arg1" ve="3">Close Settings</Str>
+			<Int sr="arg2" val="11"/>
+			<Int sr="arg3" val="100"/>
+			<Str sr="arg4" ve="3">#FF020202</Str>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<RectElement sr="background">
+				<flags>4</flags>
+				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
+				<Str sr="arg0" ve="3"/>
+				<Int sr="arg1" val="0"/>
+				<Str sr="arg2" ve="3">#80A4B3F0</Str>
+				<Str sr="arg3" ve="3"/>
+				<Int sr="arg4" val="0"/>
+				<Str sr="arg5" ve="3">#FF000000</Str>
+				<Int sr="arg6" val="25"/>
+				<Int sr="arg7" val="0"/>
+			</RectElement>
+		</TextElement>
+		<TextElement sr="elements11" ve="3">
 			<clickTask>90</clickTask>
 			<flags>4</flags>
 			<geom>0,879,222,101,29,353,642,222</geom>
@@ -220,7 +271,7 @@ Version 2.02</d>
 				<Int sr="arg7" val="0"/>
 			</RectElement>
 		</TextElement>
-		<TextElement sr="elements11" ve="3">
+		<TextElement sr="elements12" ve="3">
 			<flags>4</flags>
 			<geom>146,528,380,108,29,575,470,100</geom>
 			<Str sr="arg0" ve="3">Maximum Brightness Text</Str>
@@ -233,7 +284,7 @@ Version 2.02</d>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 		</TextElement>
-		<TextElement sr="elements12" ve="3">
+		<TextElement sr="elements13" ve="3">
 			<flags>4</flags>
 			<geom>58,196,517,98,29,575,470,100</geom>
 			<Str sr="arg0" ve="3">Master Adjust Detail</Str>
@@ -246,7 +297,7 @@ Version 2.02</d>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 		</TextElement>
-		<TextElement sr="elements13" ve="3">
+		<TextElement sr="elements14" ve="3">
 			<flags>4</flags>
 			<geom>146,362,370,166,29,575,470,100</geom>
 			<Str sr="arg0" ve="3">Minimum Set Detail</Str>
@@ -260,7 +311,7 @@ Usual value: 1</Str>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 		</TextElement>
-		<TextElement sr="elements14" ve="3">
+		<TextElement sr="elements15" ve="3">
 			<flags>4</flags>
 			<geom>19,109,594,108,29,575,470,100</geom>
 			<Str sr="arg0" ve="3">Master Switch Detail1</Str>
@@ -285,7 +336,7 @@ Usual value: 1</Str>
 				<Int sr="arg7" val="0"/>
 			</RectElement>
 		</TextElement>
-		<TextElement sr="elements15" ve="3">
+		<TextElement sr="elements16" ve="3">
 			<flags>4</flags>
 			<geom>146,674,380,108,29,575,470,100</geom>
 			<Str sr="arg0" ve="3">Time Between Updates Text</Str>
@@ -310,7 +361,7 @@ Usual value: 1</Str>
 				<Int sr="arg7" val="0"/>
 			</RectElement>
 		</TextElement>
-		<PickerElement sr="elements16">
+		<PickerElement sr="elements17">
 			<flags>4</flags>
 			<geom>516,696,185,178,497,577,165,195</geom>
 			<valueselectedTask>113</valueselectedTask>
@@ -335,7 +386,7 @@ Usual value: 1</Str>
 				<Int sr="arg7" val="0"/>
 			</RectElement>
 		</PickerElement>
-		<SliderElement sr="elements17">
+		<SliderElement sr="elements18">
 			<flags>4</flags>
 			<geom>19,263,585,69,9,606,664,343</geom>
 			<valueselectedTask>109</valueselectedTask>
@@ -361,10 +412,10 @@ Usual value: 1</Str>
 				<Int sr="arg7" val="0"/>
 			</RectElement>
 		</SliderElement>
-		<TextElement sr="elements18" ve="3">
+		<TextElement sr="elements19" ve="3">
 			<clickTask>112</clickTask>
 			<flags>4</flags>
-			<geom>604,196,97,137,29,353,642,222</geom>
+			<geom>605,196,97,137,29,353,642,222</geom>
 			<Str sr="arg0" ve="3">Reset Master Adjust Button</Str>
 			<Str sr="arg1" ve="3">Reset</Str>
 			<Int sr="arg2" val="9"/>
@@ -387,31 +438,6 @@ Usual value: 1</Str>
 				<Int sr="arg7" val="0"/>
 			</RectElement>
 		</TextElement>
-		<PickerElement sr="elements19">
-			<flags>4</flags>
-			<geom>516,343,185,172,497,577,165,195</geom>
-			<valueselectedTask>114</valueselectedTask>
-			<Str sr="arg0" ve="3">Min Brightness Input</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="25"/>
-			<Int sr="arg3">
-				<var>%DB_minimum_brightness</var>
-			</Int>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="0"/>
-			<RectElement sr="background">
-				<flags>4</flags>
-				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
-				<Str sr="arg0" ve="3"/>
-				<Int sr="arg1" val="5"/>
-				<Str sr="arg2" ve="3">#FFC8A7A7</Str>
-				<Str sr="arg3" ve="3">#21A32828</Str>
-				<Int sr="arg4" val="0"/>
-				<Str sr="arg5" ve="3">#FF000000</Str>
-				<Int sr="arg6" val="25"/>
-				<Int sr="arg7" val="0"/>
-			</RectElement>
-		</PickerElement>
 		<TextElement sr="elements2" ve="3">
 			<flags>4</flags>
 			<geom>0,0,701,99,5,0,692,254</geom>
@@ -439,6 +465,31 @@ Usual value: 1</Str>
 		</TextElement>
 		<PickerElement sr="elements20">
 			<flags>4</flags>
+			<geom>516,343,185,172,497,577,165,195</geom>
+			<valueselectedTask>114</valueselectedTask>
+			<Str sr="arg0" ve="3">Min Brightness Input</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="25"/>
+			<Int sr="arg3">
+				<var>%DB_minimum_brightness</var>
+			</Int>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="0"/>
+			<RectElement sr="background">
+				<flags>4</flags>
+				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
+				<Str sr="arg0" ve="3"/>
+				<Int sr="arg1" val="5"/>
+				<Str sr="arg2" ve="3">#FFC8A7A7</Str>
+				<Str sr="arg3" ve="3">#21A32828</Str>
+				<Int sr="arg4" val="0"/>
+				<Str sr="arg5" ve="3">#FF000000</Str>
+				<Int sr="arg6" val="25"/>
+				<Int sr="arg7" val="0"/>
+			</RectElement>
+		</PickerElement>
+		<PickerElement sr="elements21">
+			<flags>4</flags>
 			<geom>516,518,185,174,497,577,165,195</geom>
 			<valueselectedTask>115</valueselectedTask>
 			<Str sr="arg0" ve="3">Max Brightness Input</Str>
@@ -462,7 +513,7 @@ Usual value: 1</Str>
 				<Int sr="arg7" val="0"/>
 			</RectElement>
 		</PickerElement>
-		<TextElement sr="elements21" ve="3">
+		<TextElement sr="elements22" ve="3">
 			<flags>4</flags>
 			<geom>146,742,370,128,29,575,470,100</geom>
 			<Str sr="arg0" ve="3">Update Interval Explain</Str>
@@ -476,7 +527,7 @@ Usual value: 30</Str>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 		</TextElement>
-		<TextElement sr="elements22" ve="3">
+		<TextElement sr="elements23" ve="3">
 			<flags>4</flags>
 			<geom>146,567,380,108,29,575,470,100</geom>
 			<Str sr="arg0" ve="3">Maximum Set Detail</Str>
@@ -489,9 +540,9 @@ Usual value: 30</Str>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 		</TextElement>
-		<TextElement sr="elements23" ve="3">
+		<TextElement sr="elements24" ve="3">
 			<flags>4</flags>
-			<geom>0,372,145,118,0,343,135,118</geom>
+			<geom>0,313,145,118,0,343,135,118</geom>
 			<Str sr="arg0" ve="3">Notification Title</Str>
 			<Str sr="arg1" ve="3">Notifications</Str>
 			<Int sr="arg2" val="9"/>
@@ -502,9 +553,9 @@ Usual value: 30</Str>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 		</TextElement>
-		<TextElement sr="elements24" ve="3">
+		<TextElement sr="elements25" ve="3">
 			<flags>4</flags>
-			<geom>0,645,145,138,0,343,135,118</geom>
+			<geom>0,421,145,138,0,343,135,118</geom>
 			<Str sr="arg0" ve="3">Toast Title</Str>
 			<Str sr="arg1" ve="3">Toast messages</Str>
 			<Int sr="arg2" val="9"/>
@@ -515,10 +566,10 @@ Usual value: 30</Str>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 		</TextElement>
-		<CheckBoxElement sr="elements25">
+		<CheckBoxElement sr="elements26">
 			<checkchangeTask>76</checkchangeTask>
 			<flags>4</flags>
-			<geom>39,421,107,137,0,343,135,244</geom>
+			<geom>39,362,107,137,0,343,135,244</geom>
 			<Str sr="arg0" ve="3">Notification Checkbox</Str>
 			<Int sr="arg1" val="1"/>
 			<RectElement sr="background">
@@ -534,10 +585,10 @@ Usual value: 30</Str>
 				<Int sr="arg7" val="0"/>
 			</RectElement>
 		</CheckBoxElement>
-		<CheckBoxElement sr="elements26">
+		<CheckBoxElement sr="elements27">
 			<checkchangeTask>83</checkchangeTask>
 			<flags>4</flags>
-			<geom>39,703,105,138,0,343,135,244</geom>
+			<geom>39,479,105,138,0,343,135,244</geom>
 			<Str sr="arg0" ve="3">Toast Checkbox1</Str>
 			<Int sr="arg1" val="1"/>
 			<RectElement sr="background">
@@ -553,7 +604,7 @@ Usual value: 30</Str>
 				<Int sr="arg7" val="0"/>
 			</RectElement>
 		</CheckBoxElement>
-		<RectElement sr="elements27">
+		<RectElement sr="elements28">
 			<flags>12</flags>
 			<geom>146,516,555,178,146,518,546,176</geom>
 			<Str sr="arg0" ve="3">Rectangle3</Str>
@@ -565,6 +616,25 @@ Usual value: 30</Str>
 			<Int sr="arg6" val="0"/>
 			<Int sr="arg7" val="0"/>
 		</RectElement>
+		<CheckBoxElement sr="elements29">
+			<checkchangeTask>81</checkchangeTask>
+			<flags>4</flags>
+			<geom>39,577,105,138,0,343,135,244</geom>
+			<Str sr="arg0" ve="3">Beep Checkbox</Str>
+			<Int sr="arg1" val="1"/>
+			<RectElement sr="background">
+				<flags>4</flags>
+				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
+				<Str sr="arg0" ve="3"/>
+				<Int sr="arg1" val="0"/>
+				<Str sr="arg2" ve="3"/>
+				<Str sr="arg3" ve="3"/>
+				<Int sr="arg4" val="0"/>
+				<Str sr="arg5" ve="3">#FF000000</Str>
+				<Int sr="arg6" val="0"/>
+				<Int sr="arg7" val="0"/>
+			</RectElement>
+		</CheckBoxElement>
 		<SwitchElement sr="elements3">
 			<checkchangeTask>85</checkchangeTask>
 			<flags>4</flags>
@@ -584,6 +654,97 @@ Usual value: 30</Str>
 				<Int sr="arg7" val="0"/>
 			</RectElement>
 		</SwitchElement>
+		<SpinnerElement sr="elements30">
+			<flags>4</flags>
+			<geom>0,723,140,56,0,674,1192,132</geom>
+			<itemselectedTask>91</itemselectedTask>
+			<Str sr="arg0" ve="3">Spinner1</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg2" ve="3"/>
+			<Scene sr="arg3">
+				<Scene sr="val">
+					<cdate>1570989697804</cdate>
+					<edate>1570989697804</edate>
+					<heightLand>132</heightLand>
+					<heightPort>56</heightPort>
+					<nme>spinner</nme>
+					<widthLand>1192</widthLand>
+					<widthPort>140</widthPort>
+					<ImageElement sr="elements0" ve="2">
+						<flags>1</flags>
+						<geom>0,0,20,20,31,0,153,132</geom>
+						<Str sr="arg0" ve="3">Icon</Str>
+						<Img sr="arg1" ve="2">
+							<nme>hd_aaa_ext_tiles_small</nme>
+						</Img>
+						<Int sr="arg2" val="255"/>
+					</ImageElement>
+					<TextElement sr="elements1" ve="3">
+						<flags>5</flags>
+						<geom>0,0,140,56,0,0,184,132</geom>
+						<Str sr="arg0" ve="3">Label</Str>
+						<Str sr="arg1" ve="3"/>
+						<Int sr="arg2" val="9"/>
+						<Int sr="arg3" val="100"/>
+						<Str sr="arg4" ve="3">#FF086A6A</Str>
+						<Str sr="arg5" ve="3"/>
+						<Int sr="arg6" val="0"/>
+						<Int sr="arg7" val="0"/>
+						<Int sr="arg8" val="0"/>
+					</TextElement>
+					<TextElement sr="elements2" ve="3">
+						<flags>1</flags>
+						<geom>0,0,22,32,15,0,96,132</geom>
+						<Str sr="arg0" ve="3">Index</Str>
+						<Str sr="arg1" ve="3"/>
+						<Int sr="arg2" val="9"/>
+						<Int sr="arg3" val="100"/>
+						<Str sr="arg4" ve="3">#FFFFFFFF</Str>
+						<Str sr="arg5" ve="3"/>
+						<Int sr="arg6" val="4"/>
+						<Int sr="arg7" val="1"/>
+						<Int sr="arg8" val="0"/>
+					</TextElement>
+					<PropertiesElement sr="props">
+						<Int sr="arg0" val="1"/>
+						<Int sr="arg1" val="0"/>
+						<Str sr="arg2" ve="3">#00000000</Str>
+						<Int sr="arg3" val="0"/>
+						<Str sr="arg4" ve="3">spinner</Str>
+						<Str sr="arg5" ve="3"/>
+						<Img sr="arg6" ve="2"/>
+						<Str sr="arg7" ve="3"/>
+					</PropertiesElement>
+				</Scene>
+			</Scene>
+			<Str sr="arg4" ve="3">#C9000000</Str>
+			<ListElementItem sr="item0">
+				<label>Cycle</label>
+				<sel>true</sel>
+				<Img sr="icon" ve="2">
+					<nme>hl_aaa_conv_zoom_in</nme>
+				</Img>
+			</ListElementItem>
+			<ListElementItem sr="item1">
+				<label>Reset</label>
+			</ListElementItem>
+			<ListElementItem sr="item2">
+				<label>[Off]</label>
+			</ListElementItem>
+		</SpinnerElement>
+		<TextElement sr="elements31" ve="3">
+			<flags>4</flags>
+			<geom>0,664,150,69,0,343,135,118</geom>
+			<Str sr="arg0" ve="3">Shake Title</Str>
+			<Str sr="arg1" ve="3">Shake to...</Str>
+			<Int sr="arg2" val="9"/>
+			<Int sr="arg3" val="100"/>
+			<Str sr="arg4" ve="3">#FF0E0101</Str>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+		</TextElement>
 		<RectElement sr="elements4">
 			<flags>4</flags>
 			<geom>146,339,555,536,0,89,225,330</geom>
@@ -598,7 +759,7 @@ Usual value: 30</Str>
 		</RectElement>
 		<RectElement sr="elements5">
 			<flags>4</flags>
-			<geom>0,89,702,98,0,89,225,330</geom>
+			<geom>0,89,663,98,0,89,225,330</geom>
 			<Str sr="arg0" ve="3">Rectangle11</Str>
 			<Int sr="arg1" val="0"/>
 			<Str sr="arg2" ve="3">#12520101</Str>
@@ -649,6 +810,19 @@ Usual value: 30</Str>
 		</TextElement>
 		<TextElement sr="elements8" ve="3">
 			<flags>4</flags>
+			<geom>0,528,150,138,0,343,135,118</geom>
+			<Str sr="arg0" ve="3">Beep Title</Str>
+			<Str sr="arg1" ve="3">Beeps</Str>
+			<Int sr="arg2" val="9"/>
+			<Int sr="arg3" val="100"/>
+			<Str sr="arg4" ve="3">#FF0E0101</Str>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+		</TextElement>
+		<TextElement sr="elements9" ve="3">
+			<flags>4</flags>
 			<geom>146,313,370,99,29,575,470,100</geom>
 			<Str sr="arg0" ve="3">Minimum Brightness Text</Str>
 			<Str sr="arg1" ve="3">Min Brightness</Str>
@@ -659,32 +833,6 @@ Usual value: 30</Str>
 			<Int sr="arg6" val="0"/>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
-		</TextElement>
-		<TextElement sr="elements9" ve="3">
-			<clickTask>88</clickTask>
-			<flags>4</flags>
-			<geom>487,879,214,101,29,353,642,222</geom>
-			<Str sr="arg0" ve="3">Close Settings Text</Str>
-			<Str sr="arg1" ve="3">Close Settings</Str>
-			<Int sr="arg2" val="11"/>
-			<Int sr="arg3" val="100"/>
-			<Str sr="arg4" ve="3">#FF020202</Str>
-			<Str sr="arg5" ve="3"/>
-			<Int sr="arg6" val="0"/>
-			<Int sr="arg7" val="0"/>
-			<Int sr="arg8" val="0"/>
-			<RectElement sr="background">
-				<flags>4</flags>
-				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
-				<Str sr="arg0" ve="3"/>
-				<Int sr="arg1" val="0"/>
-				<Str sr="arg2" ve="3">#80A4B3F0</Str>
-				<Str sr="arg3" ve="3"/>
-				<Int sr="arg4" val="0"/>
-				<Str sr="arg5" ve="3">#FF000000</Str>
-				<Int sr="arg6" val="25"/>
-				<Int sr="arg7" val="0"/>
-			</RectElement>
 		</TextElement>
 		<PropertiesElement sr="props">
 			<Int sr="arg0" val="2"/>
@@ -701,7 +849,7 @@ Usual value: 30</Str>
 	</Scene>
 	<Scene sr="sceneDisplay Brightness">
 		<cdate>1570324870929</cdate>
-		<edate>1570952246587</edate>
+		<edate>1570963624754</edate>
 		<gridSize>10</gridSize>
 		<heightLand>440</heightLand>
 		<heightPort>470</heightPort>
@@ -838,7 +986,7 @@ Usual value: 30</Str>
 	</Scene>
 	<Scene sr="sceneHTML Popup-DB">
 		<cdate>1570341504005</cdate>
-		<edate>1570955357626</edate>
+		<edate>1570962474095</edate>
 		<heightLand>-1</heightLand>
 		<heightPort>1590</heightPort>
 		<nme>HTML Popup-DB</nme>
@@ -998,7 +1146,7 @@ Usual value: 30</Str>
 	</Scene>
 	<Task sr="task101">
 		<cdate>1570916030020</cdate>
-		<edate>1570953261904</edate>
+		<edate>1570995731071</edate>
 		<id>101</id>
 		<nme>DB On Startup</nme>
 		<pri>100</pri>
@@ -1025,7 +1173,7 @@ Usual value: 30</Str>
 		</Action>
 		<Action sr="act10" ve="7">
 			<code>547</code>
-			<Str sr="arg0" ve="3">%DB_Toasts_on</Str>
+			<Str sr="arg0" ve="3">%DB_Notifications_on</Str>
 			<Str sr="arg1" ve="3">On</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
@@ -1034,6 +1182,24 @@ Usual value: 30</Str>
 		</Action>
 		<Action sr="act11" ve="7">
 			<code>547</code>
+			<Str sr="arg0" ve="3">%DB_Shake_Setting</Str>
+			<Str sr="arg1" ve="3">1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DB_Sound_on</Str>
+			<Str sr="arg1" ve="3">On</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_on</Str>
 			<Str sr="arg1" ve="3">On</Str>
 			<Int sr="arg2" val="0"/>
@@ -1041,7 +1207,7 @@ Usual value: 30</Str>
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
 		</Action>
-		<Action sr="act12" ve="7">
+		<Action sr="act14" ve="7">
 			<code>130</code>
 			<label>Restore variables, overwriting defaults if they exist</label>
 			<Str sr="arg0" ve="3">DB Restore Tasker User Variables</Str>
@@ -1105,7 +1271,7 @@ Usual value: 30</Str>
 		<Action sr="act8" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_Adjust_Interval_sec</Str>
-			<Str sr="arg1" ve="3">20</Str>
+			<Str sr="arg1" ve="3">30</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
@@ -1123,7 +1289,7 @@ Usual value: 30</Str>
 	</Task>
 	<Task sr="task102">
 		<cdate>1435079541637</cdate>
-		<edate>1570956082438</edate>
+		<edate>1570993973857</edate>
 		<id>102</id>
 		<nme>DB Restore Tasker User Variables</nme>
 		<pri>100</pri>
@@ -1357,7 +1523,7 @@ Usual value: 30</Str>
 	</Task>
 	<Task sr="task103">
 		<cdate>1435079541637</cdate>
-		<edate>1570956069907</edate>
+		<edate>1570993962094</edate>
 		<id>103</id>
 		<nme>DB Backup Tasker User Variables</nme>
 		<pri>100</pri>
@@ -1892,67 +2058,20 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act2" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="1852"/>
-			<Int sr="arg1" val="200"/>
-			<Int sr="arg2" val="13"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
 			<Int sr="arg3" val="3"/>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">Display Brightness Adjust</Str>
-			<Int sr="arg1">
-				<var>%priority+1</var>
-			</Int>
-			<Str sr="arg2" ve="3">manual</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>130</code>
-			<on>false</on>
-			<Str sr="arg0" ve="3">DB Backup Tasker User Variables</Str>
-			<Int sr="arg1">
-				<var>%priority-10</var>
-			</Int>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-		</Action>
-	</Task>
-	<Task sr="task112">
-		<cdate>1570935693621</cdate>
-		<edate>1570935693621</edate>
-		<id>112</id>
-		<pri>21</pri>
-		<Action sr="act0" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%DB_master_brightness_adjust</Str>
-			<Str sr="arg1" ve="3">0</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="1"/>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%DB_master_brightness_adjust_slider</Str>
-			<Str sr="arg1" ve="3">50</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="1"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>50</code>
-			<Str sr="arg0" ve="3">DB Settings Screen</Str>
-			<Str sr="arg1" ve="3">Brightness Master Adjust Slider</Str>
-			<Int sr="arg2">
-				<var>%DB_master_brightness_adjust_slider</var>
-			</Int>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act3" ve="7">
 			<code>171</code>
+			<on>false</on>
 			<Int sr="arg0" val="1852"/>
 			<Int sr="arg1" val="200"/>
 			<Int sr="arg2" val="13"/>
@@ -1982,11 +2101,88 @@ android.permission.WRITE_SETTINGS</Str>
 			<Int sr="arg5" val="0"/>
 		</Action>
 	</Task>
+	<Task sr="task112">
+		<cdate>1570935693621</cdate>
+		<edate>1570935693621</edate>
+		<id>112</id>
+		<pri>24</pri>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DB_master_brightness_adjust</Str>
+			<Str sr="arg1" ve="3">0</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DB_master_brightness_adjust_slider</Str>
+			<Str sr="arg1" ve="3">50</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>50</code>
+			<Str sr="arg0" ve="3">DB Settings Screen</Str>
+			<Str sr="arg1" ve="3">Brightness Master Adjust Slider</Str>
+			<Int sr="arg2">
+				<var>%DB_master_brightness_adjust_slider</var>
+			</Int>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>171</code>
+			<Int sr="arg0" val="1852"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
+			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>171</code>
+			<on>false</on>
+			<Int sr="arg0" val="1852"/>
+			<Int sr="arg1" val="200"/>
+			<Int sr="arg2" val="13"/>
+			<Int sr="arg3" val="3"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">Display Brightness Adjust</Str>
+			<Int sr="arg1">
+				<var>%priority+1</var>
+			</Int>
+			<Str sr="arg2" ve="3">manual</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>130</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">DB Backup Tasker User Variables</Str>
+			<Int sr="arg1">
+				<var>%priority-10</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+	</Task>
 	<Task sr="task113">
 		<cdate>1570938399694</cdate>
 		<edate>1570938399694</edate>
 		<id>113</id>
-		<pri>102</pri>
+		<pri>24</pri>
 		<Action sr="act0" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_Adjust_Interval_sec</Str>
@@ -1999,11 +2195,26 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act1" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="1852"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
+			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>171</code>
+			<on>false</on>
+			<Int sr="arg0" val="1852"/>
 			<Int sr="arg1" val="200"/>
 			<Int sr="arg2" val="13"/>
 			<Int sr="arg3" val="3"/>
 		</Action>
-		<Action sr="act2" ve="7">
+		<Action sr="act3" ve="7">
 			<code>130</code>
 			<on>false</on>
 			<Str sr="arg0" ve="3">DB Backup Tasker User Variables</Str>
@@ -2020,7 +2231,7 @@ android.permission.WRITE_SETTINGS</Str>
 		<cdate>1570938399694</cdate>
 		<edate>1570938399694</edate>
 		<id>114</id>
-		<pri>23</pri>
+		<pri>24</pri>
 		<Action sr="act0" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_minimum_brightness</Str>
@@ -2075,11 +2286,26 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act4" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="1852"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
+			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>171</code>
+			<on>false</on>
+			<Int sr="arg0" val="1852"/>
 			<Int sr="arg1" val="200"/>
 			<Int sr="arg2" val="13"/>
 			<Int sr="arg3" val="3"/>
 		</Action>
-		<Action sr="act5" ve="7">
+		<Action sr="act6" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">Display Brightness Adjust</Str>
 			<Int sr="arg1">
@@ -2090,7 +2316,7 @@ android.permission.WRITE_SETTINGS</Str>
 			<Str sr="arg4" ve="3"/>
 			<Int sr="arg5" val="0"/>
 		</Action>
-		<Action sr="act6" ve="7">
+		<Action sr="act7" ve="7">
 			<code>130</code>
 			<on>false</on>
 			<Str sr="arg0" ve="3">DB Backup Tasker User Variables</Str>
@@ -2107,7 +2333,7 @@ android.permission.WRITE_SETTINGS</Str>
 		<cdate>1570938399694</cdate>
 		<edate>1570938399694</edate>
 		<id>115</id>
-		<pri>102</pri>
+		<pri>24</pri>
 		<Action sr="act0" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_maximum_brightness</Str>
@@ -2125,11 +2351,26 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act2" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="1852"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
+			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>171</code>
+			<on>false</on>
+			<Int sr="arg0" val="1852"/>
 			<Int sr="arg1" val="200"/>
 			<Int sr="arg2" val="13"/>
 			<Int sr="arg3" val="3"/>
 		</Action>
-		<Action sr="act3" ve="7">
+		<Action sr="act4" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">Display Brightness Adjust</Str>
 			<Int sr="arg1">
@@ -2140,7 +2381,7 @@ android.permission.WRITE_SETTINGS</Str>
 			<Str sr="arg4" ve="3"/>
 			<Int sr="arg5" val="0"/>
 		</Action>
-		<Action sr="act4" ve="7">
+		<Action sr="act5" ve="7">
 			<code>130</code>
 			<on>false</on>
 			<Str sr="arg0" ve="3">DB Backup Tasker User Variables</Str>
@@ -2605,10 +2846,10 @@ android.permission.WRITE_SETTINGS</Str>
 	</Task>
 	<Task sr="task42">
 		<cdate>1569949207285</cdate>
-		<edate>1570948803916</edate>
+		<edate>1570995404880</edate>
 		<id>42</id>
 		<nme>Display Brightness Adjust</nme>
-		<pri>6</pri>
+		<pri>100</pri>
 		<rty>1</rty>
 		<Action sr="act0" ve="7">
 			<code>30</code>
@@ -3477,10 +3718,11 @@ android.permission.WRITE_SETTINGS</Str>
 	</Task>
 	<Task sr="task44">
 		<cdate>1569999588860</cdate>
-		<edate>1570925972778</edate>
+		<edate>1570995371335</edate>
 		<id>44</id>
 		<nme>Display Brightness High</nme>
-		<pri>7</pri>
+		<pri>100</pri>
+		<rty>1</rty>
 		<Action sr="act0" ve="7">
 			<code>37</code>
 			<ConditionList sr="if">
@@ -3505,9 +3747,16 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act10" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="1852"/>
-			<Int sr="arg1" val="200"/>
-			<Int sr="arg2" val="13"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="2"/>
 			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act11" ve="7">
 			<code>130</code>
@@ -3546,7 +3795,7 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act6" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_BrightnessSet_adjustment</Str>
-			<Str sr="arg1" ve="3">180</Str>
+			<Str sr="arg1" ve="3">90</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="1"/>
 			<Int sr="arg4" val="0"/>
@@ -3589,7 +3838,7 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act9" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_BrightnessSet_adjustment</Str>
-			<Str sr="arg1" ve="3">200</Str>
+			<Str sr="arg1" ve="3">100</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
@@ -3598,7 +3847,7 @@ android.permission.WRITE_SETTINGS</Str>
 				<Condition sr="c0" ve="3">
 					<lhs>%DB_BrightnessSet_adjustment</lhs>
 					<op>7</op>
-					<rhs>200</rhs>
+					<rhs>100</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
@@ -3608,10 +3857,10 @@ android.permission.WRITE_SETTINGS</Str>
 	</Task>
 	<Task sr="task45">
 		<cdate>1569989152321</cdate>
-		<edate>1570925979898</edate>
+		<edate>1570995353380</edate>
 		<id>45</id>
 		<nme>Display Brightness Medium</nme>
-		<pri>7</pri>
+		<pri>6</pri>
 		<rty>1</rty>
 		<Action sr="act0" ve="7">
 			<code>37</code>
@@ -3670,11 +3919,17 @@ android.permission.WRITE_SETTINGS</Str>
 		</Action>
 		<Action sr="act5" ve="7">
 			<code>171</code>
-			<on>false</on>
-			<Int sr="arg0" val="1552"/>
-			<Int sr="arg1" val="200"/>
-			<Int sr="arg2" val="13"/>
+			<Int sr="arg0" val="1352"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="4"/>
 			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act6" ve="7">
 			<code>547</code>
@@ -3717,10 +3972,11 @@ android.permission.WRITE_SETTINGS</Str>
 	</Task>
 	<Task sr="task46">
 		<cdate>1569999588860</cdate>
-		<edate>1570941787738</edate>
+		<edate>1570995388761</edate>
 		<id>46</id>
 		<nme>Display Brightness +</nme>
 		<pri>100</pri>
+		<rty>1</rty>
 		<Action sr="act0" ve="7">
 			<code>37</code>
 			<ConditionList sr="if">
@@ -3745,9 +4001,16 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act10" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="1852"/>
-			<Int sr="arg1" val="200"/>
-			<Int sr="arg2" val="13"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="2"/>
 			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act11" ve="7">
 			<code>130</code>
@@ -3829,7 +4092,7 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act9" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_BrightnessSet_adjustment</Str>
-			<Str sr="arg1" ve="3">200</Str>
+			<Str sr="arg1" ve="3">100</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
@@ -3838,7 +4101,7 @@ android.permission.WRITE_SETTINGS</Str>
 				<Condition sr="c0" ve="3">
 					<lhs>%DB_BrightnessSet_adjustment</lhs>
 					<op>7</op>
-					<rhs>200</rhs>
+					<rhs>100</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
@@ -3848,10 +4111,11 @@ android.permission.WRITE_SETTINGS</Str>
 	</Task>
 	<Task sr="task47">
 		<cdate>1569999588860</cdate>
-		<edate>1570925965621</edate>
+		<edate>1570995397081</edate>
 		<id>47</id>
 		<nme>Display Brightness -</nme>
-		<pri>7</pri>
+		<pri>100</pri>
+		<rty>1</rty>
 		<Action sr="act0" ve="7">
 			<code>37</code>
 			<ConditionList sr="if">
@@ -3954,16 +4218,23 @@ android.permission.WRITE_SETTINGS</Str>
 				<Condition sr="c0" ve="3">
 					<lhs>%DB_BrightnessSet_adjustment</lhs>
 					<op>6</op>
-					<rhs>-200</rhs>
+					<rhs>-100</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
 		<Action sr="act9" ve="7">
 			<code>171</code>
-			<Int sr="arg0" val="1252"/>
-			<Int sr="arg1" val="200"/>
-			<Int sr="arg2" val="13"/>
+			<Int sr="arg0" val="1052"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="8"/>
 			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Img sr="icn" ve="2">
 			<nme>mw_navigation_arrow_back</nme>
@@ -3971,10 +4242,11 @@ android.permission.WRITE_SETTINGS</Str>
 	</Task>
 	<Task sr="task59">
 		<cdate>1569999588860</cdate>
-		<edate>1570925985321</edate>
+		<edate>1570995379096</edate>
 		<id>59</id>
 		<nme>Display Brightness Low</nme>
-		<pri>7</pri>
+		<pri>100</pri>
+		<rty>1</rty>
 		<Action sr="act0" ve="7">
 			<code>37</code>
 			<ConditionList sr="if">
@@ -3998,10 +4270,17 @@ android.permission.WRITE_SETTINGS</Str>
 		</Action>
 		<Action sr="act10" ve="7">
 			<code>171</code>
-			<Int sr="arg0" val="1852"/>
-			<Int sr="arg1" val="200"/>
-			<Int sr="arg2" val="13"/>
+			<Int sr="arg0" val="852"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
 			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act11" ve="7">
 			<code>130</code>
@@ -4040,7 +4319,7 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act6" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_BrightnessSet_adjustment</Str>
-			<Str sr="arg1" ve="3">-180</Str>
+			<Str sr="arg1" ve="3">-90</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="1"/>
 			<Int sr="arg4" val="0"/>
@@ -4083,7 +4362,7 @@ android.permission.WRITE_SETTINGS</Str>
 		<Action sr="act9" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_BrightnessSet_adjustment</Str>
-			<Str sr="arg1" ve="3">-200</Str>
+			<Str sr="arg1" ve="3">-100</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
@@ -4092,7 +4371,7 @@ android.permission.WRITE_SETTINGS</Str>
 				<Condition sr="c0" ve="3">
 					<lhs>%DB_BrightnessSet_adjustment</lhs>
 					<op>6</op>
-					<rhs>-200</rhs>
+					<rhs>-100</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
@@ -4102,7 +4381,7 @@ android.permission.WRITE_SETTINGS</Str>
 	</Task>
 	<Task sr="task60">
 		<cdate>1570322540882</cdate>
-		<edate>1570346969272</edate>
+		<edate>1570962392360</edate>
 		<id>60</id>
 		<nme>Display Brightness Screen On</nme>
 		<pri>1</pri>
@@ -4329,7 +4608,7 @@ android.permission.WRITE_SETTINGS</Str>
 		<cdate>1570325769321</cdate>
 		<edate>1570325769321</edate>
 		<id>62</id>
-		<pri>102</pri>
+		<pri>9</pri>
 		<Action sr="act0" ve="7">
 			<code>48</code>
 			<se>false</se>
@@ -4361,7 +4640,7 @@ android.permission.WRITE_SETTINGS</Str>
 		<cdate>1570326155104</cdate>
 		<edate>1570326155104</edate>
 		<id>63</id>
-		<pri>21</pri>
+		<pri>9</pri>
 		<Action sr="act0" ve="7">
 			<code>48</code>
 			<se>false</se>
@@ -4370,7 +4649,7 @@ android.permission.WRITE_SETTINGS</Str>
 		</Action>
 		<Action sr="act1" ve="7">
 			<code>130</code>
-			<Str sr="arg0" ve="3">Display Brightness Medium</Str>
+			<Str sr="arg0" ve="3">Display Brightness Reset</Str>
 			<Int sr="arg1">
 				<var>%priority+1</var>
 			</Int>
@@ -4575,9 +4854,16 @@ Step by step instructions to do that:&lt;/P&gt;
 		<Action sr="act0" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="787"/>
-			<Int sr="arg1" val="300"/>
-			<Int sr="arg2" val="27"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
 			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act1" ve="7">
 			<code>49</code>
@@ -4591,7 +4877,7 @@ Step by step instructions to do that:&lt;/P&gt;
 		<cdate>1570948995338</cdate>
 		<edate>1570948995338</edate>
 		<id>76</id>
-		<pri>24</pri>
+		<pri>21</pri>
 		<Action sr="act0" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_Notifications_on</Str>
@@ -4629,9 +4915,16 @@ Step by step instructions to do that:&lt;/P&gt;
 		<Action sr="act3" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="1852"/>
-			<Int sr="arg1" val="200"/>
-			<Int sr="arg2" val="13"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
 			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act4" ve="7">
 			<code>548</code>
@@ -4643,7 +4936,7 @@ Step by step instructions to do that:&lt;/P&gt;
 		<cdate>1570326155104</cdate>
 		<edate>1570326155104</edate>
 		<id>77</id>
-		<pri>21</pri>
+		<pri>9</pri>
 		<Action sr="act0" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">DB Show Settings</Str>
@@ -4684,11 +4977,256 @@ Step by step instructions to do that:&lt;/P&gt;
 			<Int sr="arg5" val="0"/>
 		</Action>
 	</Task>
+	<Task sr="task80">
+		<cdate>1569989152321</cdate>
+		<edate>1570987874114</edate>
+		<id>80</id>
+		<nme>Display Brightness Manual Adjust</nme>
+		<pri>6</pri>
+		<rty>1</rty>
+		<Action sr="act0" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_on</lhs>
+					<op>2</op>
+					<rhs>Off</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">DB Is Off, Go To Settings</Str>
+			<Int sr="arg1">
+				<var>%priority+1</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>171</code>
+			<Int sr="arg0" val="1052"/>
+			<Int sr="arg1" val="101"/>
+			<Int sr="arg2" val="6"/>
+			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>130</code>
+			<label>Loop</label>
+			<Str sr="arg0" ve="3">Display Brightness Adjust</Str>
+			<Int sr="arg1">
+				<var>%priority+10</var>
+			</Int>
+			<Str sr="arg2" ve="3">manual</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Img sr="icn" ve="2">
+			<nme>cust_appshortcut_settings</nme>
+		</Img>
+	</Task>
+	<Task sr="task81">
+		<cdate>1570949615926</cdate>
+		<edate>1570949615926</edate>
+		<id>81</id>
+		<pri>21</pri>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DB_Sound_on</Str>
+			<Str sr="arg1" ve="3">%new_val</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%msg</Str>
+			<Str sr="arg1" ve="3">OFF</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%msg</Str>
+			<Str sr="arg1" ve="3">ON</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%new_val</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>171</code>
+			<Int sr="arg0" val="1852"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
+			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Beep sounds %msg</Str>
+			<Int sr="arg1" val="1"/>
+		</Action>
+	</Task>
+	<Task sr="task82">
+		<cdate>1569989152321</cdate>
+		<edate>1570995362497</edate>
+		<id>82</id>
+		<nme>Display Brightness Reset</nme>
+		<pri>7</pri>
+		<rty>1</rty>
+		<Action sr="act0" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_on</lhs>
+					<op>2</op>
+					<rhs>Off</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>300</code>
+			<label>This is the task requested by the slider scene, RESET</label>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>890</code>
+			<Str sr="arg0" ve="3">%lcount</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">Loop</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%lcount</lhs>
+					<op>7</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>300</code>
+			<label>Because of the time smoothing / moving average of light level, to get to a certain level we need to call the routine about 5-6 times</label>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">DB Is Off, Go To Settings</Str>
+			<Int sr="arg1">
+				<var>%priority+1</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DB_BrightnessSet_adjustment</Str>
+			<Str sr="arg1" ve="3">0</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>171</code>
+			<on>false</on>
+			<Int sr="arg0" val="1552"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="4"/>
+			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%lcount</Str>
+			<Str sr="arg1" ve="3">1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>130</code>
+			<label>Loop</label>
+			<Str sr="arg0" ve="3">Display Brightness Adjust</Str>
+			<Int sr="arg1">
+				<var>%priority+10</var>
+			</Int>
+			<Str sr="arg2" ve="3">manual</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>30</code>
+			<Int sr="arg0" val="0"/>
+			<Int sr="arg1" val="3"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Img sr="icn" ve="2">
+			<nme>cust_appshortcut_settings</nme>
+		</Img>
+	</Task>
 	<Task sr="task83">
 		<cdate>1570949615926</cdate>
 		<edate>1570949615926</edate>
 		<id>83</id>
-		<pri>24</pri>
+		<pri>21</pri>
 		<Action sr="act0" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%DB_Toasts_on</Str>
@@ -4726,11 +5264,26 @@ Step by step instructions to do that:&lt;/P&gt;
 		<Action sr="act3" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="1852"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
+			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>171</code>
+			<on>false</on>
+			<Int sr="arg0" val="1852"/>
 			<Int sr="arg1" val="200"/>
 			<Int sr="arg2" val="13"/>
 			<Int sr="arg3" val="3"/>
 		</Action>
-		<Action sr="act4" ve="7">
+		<Action sr="act5" ve="7">
 			<code>548</code>
 			<Str sr="arg0" ve="3">Toast messages %msg</Str>
 			<Int sr="arg1" val="1"/>
@@ -4765,9 +5318,16 @@ Step by step instructions to do that:&lt;/P&gt;
 		<Action sr="act2" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="1852"/>
-			<Int sr="arg1" val="200"/>
-			<Int sr="arg2" val="13"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="9"/>
 			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act3" ve="7">
 			<code>547</code>
@@ -4827,7 +5387,7 @@ Step by step instructions to do that:&lt;/P&gt;
 		<cdate>1568512778661</cdate>
 		<edate>1568512778661</edate>
 		<id>86</id>
-		<pri>102</pri>
+		<pri>24</pri>
 		<Action sr="act0" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">DB Check All Permissions</Str>
@@ -4844,7 +5404,7 @@ Step by step instructions to do that:&lt;/P&gt;
 		<cdate>1568512778661</cdate>
 		<edate>1568512778661</edate>
 		<id>88</id>
-		<pri>23</pri>
+		<pri>12</pri>
 		<Action sr="act0" ve="7">
 			<code>50</code>
 			<on>false</on>
@@ -4871,11 +5431,26 @@ Step by step instructions to do that:&lt;/P&gt;
 		<Action sr="act3" ve="7">
 			<code>171</code>
 			<Int sr="arg0" val="1852"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="3"/>
+			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>171</code>
+			<on>false</on>
+			<Int sr="arg0" val="1852"/>
 			<Int sr="arg1" val="200"/>
 			<Int sr="arg2" val="13"/>
 			<Int sr="arg3" val="3"/>
 		</Action>
-		<Action sr="act4" ve="7">
+		<Action sr="act5" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">Display Brightness Adjust</Str>
 			<Int sr="arg1">
@@ -4886,7 +5461,7 @@ Step by step instructions to do that:&lt;/P&gt;
 			<Str sr="arg4" ve="3"/>
 			<Int sr="arg5" val="0"/>
 		</Action>
-		<Action sr="act5" ve="7">
+		<Action sr="act6" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">DB Backup Tasker User Variables</Str>
 			<Int sr="arg1">
@@ -4898,11 +5473,78 @@ Step by step instructions to do that:&lt;/P&gt;
 			<Int sr="arg5" val="0"/>
 		</Action>
 	</Task>
+	<Task sr="task89">
+		<cdate>1570988113793</cdate>
+		<edate>1570995417945</edate>
+		<id>89</id>
+		<nme>Display Brightness Shake High-Low-Med</nme>
+		<pri>6</pri>
+		<rty>1</rty>
+		<Action sr="act0" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_BrightnessSet_adjustment</lhs>
+					<op>7</op>
+					<rhs>50</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">Display Brightness Low</Str>
+			<Int sr="arg1">
+				<var>%priority+1</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_BrightnessSet_adjustment</lhs>
+					<op>6</op>
+					<rhs>-50</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">Display Brightness Medium</Str>
+			<Int sr="arg1">
+				<var>%priority+1</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">Display Brightness High</Str>
+			<Int sr="arg1">
+				<var>%priority+1</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>38</code>
+		</Action>
+	</Task>
 	<Task sr="task90">
 		<cdate>1568512778661</cdate>
 		<edate>1568512778661</edate>
 		<id>90</id>
-		<pri>102</pri>
+		<pri>24</pri>
 		<Action sr="act0" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">Display Brightness Tile Create</Str>
@@ -4911,6 +5553,23 @@ Step by step instructions to do that:&lt;/P&gt;
 			</Int>
 			<Str sr="arg2" ve="3"/>
 			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task91">
+		<cdate>1570991392455</cdate>
+		<edate>1570991392455</edate>
+		<id>91</id>
+		<pri>12</pri>
+		<Action sr="act0" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">DB Shake Spinner Select</Str>
+			<Int sr="arg1">
+				<var>%priority+1</var>
+			</Int>
+			<Str sr="arg2" ve="3">%tap_label</Str>
+			<Str sr="arg3" ve="3">%tap_index</Str>
 			<Str sr="arg4" ve="3"/>
 			<Int sr="arg5" val="0"/>
 		</Action>
@@ -4937,9 +5596,103 @@ Step by step instructions to do that:&lt;/P&gt;
 			<Int sr="arg5" val="0"/>
 		</Action>
 	</Task>
+	<Task sr="task93">
+		<cdate>1570992138771</cdate>
+		<edate>1570995426794</edate>
+		<id>93</id>
+		<nme>DB Shake Spinner Select</nme>
+		<pri>100</pri>
+		<rty>1</rty>
+		<Action sr="act0" ve="7">
+			<code>171</code>
+			<Int sr="arg0" val="1280"/>
+			<Int sr="arg1" val="100"/>
+			<Int sr="arg2" val="3"/>
+			<Int sr="arg3" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DB_Shake_Setting</Str>
+			<Str sr="arg1" ve="3">%par2</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>159</code>
+			<Str sr="arg0" ve="3">DB Shake Cycle_DB</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>2</op>
+					<rhs>Reset</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>159</code>
+			<Str sr="arg0" ve="3">DB Shake Reset_DB</Str>
+			<Int sr="arg1" val="1"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>159</code>
+			<Str sr="arg0" ve="3">DB Shake Cycle_DB</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>2</op>
+					<rhs>Cycle</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>159</code>
+			<Str sr="arg0" ve="3">DB Shake Reset_DB</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>159</code>
+			<Str sr="arg0" ve="3">DB Shake Cycle_DB</Str>
+			<Int sr="arg1" val="1"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>2</op>
+					<rhs>[Off]</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>159</code>
+			<Str sr="arg0" ve="3">DB Shake Reset_DB</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+	</Task>
 	<Task sr="task98">
 		<cdate>1570914197399</cdate>
-		<edate>1570957043004</edate>
+		<edate>1570994519013</edate>
 		<id>98</id>
 		<nme>DB Show Settings</nme>
 		<pri>100</pri>
@@ -4962,6 +5715,73 @@ Step by step instructions to do that:&lt;/P&gt;
 			<Int sr="arg5" val="0"/>
 			<Int sr="arg6" val="0"/>
 			<Int sr="arg7" val="1"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>50</code>
+			<Str sr="arg0" ve="3">DB Settings Screen</Str>
+			<Str sr="arg1" ve="3">Beep Checkbox</Str>
+			<Int sr="arg2">
+				<var>0</var>
+			</Int>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>50</code>
+			<Str sr="arg0" ve="3">DB Settings Screen</Str>
+			<Str sr="arg1" ve="3">Beep Checkbox</Str>
+			<Int sr="arg2">
+				<var>1</var>
+			</Int>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Sound_on</lhs>
+					<op>2</op>
+					<rhs>On</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DB_Shake_Setting</Str>
+			<Str sr="arg1" ve="3">1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<bool0>Or</bool0>
+				<Condition sr="c0" ve="3">
+					<lhs>%DB_Shake_Setting</lhs>
+					<op>13</op>
+					<rhs></rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%DB_Shake_Setting</lhs>
+					<op>5</op>
+					<rhs>^[0-9]+$</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>195</code>
+			<Str sr="arg0" ve="3">DB Settings Screen</Str>
+			<Str sr="arg1" ve="3">Spinner1</Str>
+			<Int sr="arg2" val="2"/>
+			<Str sr="arg3" ve="3">%shake_spinner</Str>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>50</code>
+			<Str sr="arg0" ve="3">DB Settings Screen</Str>
+			<Str sr="arg1" ve="3">Spinner1</Str>
+			<Int sr="arg2">
+				<var>%DB_Shake_Setting</var>
+			</Int>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%shake_spinner</lhs>
+					<op>1</op>
+					<rhs>%DB_Shake_Setting</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act2" ve="7">
 			<code>50</code>
