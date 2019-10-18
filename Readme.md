@@ -16,11 +16,11 @@ It includes a simple slider to manually tweak the auto settings to be a bit brig
 SIMPLE IS BETTER
 It is built with the philosophy that it is better to have a simple, moderately helpful auto-screen brightness adjuster than a super-complicated system that tries to adapt to every possible circumstance, but usually gets it wrong. And is impossible to understand or adjust manually.
 
-Simple Auto Brightness simply reads your device's ambient light sensor and then sets screen brightness accordingingly. Once you have adjusted the brightness curve to your device (Settings/Master Brightness Adjust), it will usually be pretty close to the right brightness.
+Simple Auto Brightness simply reads your device's ambient light sensor and then sets screen brightness accordingly. Once you have adjusted the brightness curve to your device (Settings/Master Brightness Adjust), it will usually be pretty close to the right brightness.
 
 If it's a little too bright or dim, it's easy to pull up the Simple Auto Brightness Screen and tweak it a little brighter or dimmer.
 
-It gives you the control of manual brightness adjustment with just a little bit of auotmatic help.
+It gives you the control of manual brightness adjustment with just a little bit of automatic help.
 
 RUN VIA QUICK SETTINGS
 You can quickly pop up the slider to adjust the brightness two ways:
