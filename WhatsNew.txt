@@ -5,3 +5,12 @@
 * Fixed many bugs with the "shake" system and slightly revamped the shake options
 * Retaining settings across reboot should now work consistently
 * Many routine bug fixes
+
+== NEW IN VERSION 2.10 ==
+
+many new settings, options, bug fixes:
+
+ - New shake options, and disable shake
+ - Notify, toast, and sound enable/disable
+ - Various bug fixes
+ - Name change to Simple Auto Brightness
