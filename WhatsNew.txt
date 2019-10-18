@@ -1,0 +1,7 @@
+== NEW IN VERSION 2.22 ==
+
+* All screens now landscape-compatible
+* Disabling app in settings screen is now more visually obvious; if you try to start the app when it is disabled it will take you straight to the settings screen
+* Fixed many bugs with the "shake" system and slightly revamped the shake options
+* Retaining settings across reboot should now work consistently
+* Many routine bug fixes
