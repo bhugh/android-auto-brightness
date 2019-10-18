@@ -10,7 +10,10 @@
 
 many new settings, options, bug fixes:
 
- - New shake options, and disable shake
- - Notify, toast, and sound enable/disable
- - Various bug fixes
- - Name change to Simple Auto Brightness
+* New shake options, and disable shake
+* Notify, toast, and sound enable/disable
+* Various bug fixes
+* Name change to Simple Auto Brightness
+ 
+== NEW IN VERSION 2.02 ==
+* Added settings page
