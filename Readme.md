@@ -1,5 +1,5 @@
 
-Simple Auto Brightness - a small app to automatically adjust the Android display brightness. 
+Simple Auto Brightness - a small, simple app to automatically adjust the Android display brightness. 
 
 Available as a self-standing Android app OR as a Tasker project.
 
