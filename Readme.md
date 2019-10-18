@@ -3,7 +3,7 @@ Simple Auto Brightness - a small app to automatically adjust the Android display
 
 Available as a self-standing Android app OR as a Tasker project.
 
-![Screenshot_20191012-151617_Display_Brightness](https://user-images.githubusercontent.com/2321668/66707495-ffe07e80-ed06-11e9-8458-62b250d9351b.png)
+![simple-auto-brightness-screenshot-2019-10-18-crop](https://user-images.githubusercontent.com/2321668/67133501-b72b3880-f1d2-11e9-92fc-a808abd084da.png)
 
 Is Android's Adaptive Screen Brightness driving you crazy?
 
@@ -11,7 +11,7 @@ Here is a simple replacement app.
 
 It automatically sets display brightness based on ambient light and auto-updates it every few seconds. You can set the update Interval as long or short as you like.
 
-It includes a simple slider to manually tweak the auto settings to be a bit brighter or darker and an option to use a simple shake gesture to either re-read current brightness levels or quickly switch between low, medium, and high brightness (at your choice). 
+It includes a simple slider to manually tweak the auto settings to be a bit brighter or darker and an option to use a simple shake gesture to either re-read current brightness levels OR quickly switch between low, medium, and high brightness. 
 
 SIMPLE IS BETTER
 It is built with the philosophy that it is better to have a simple, moderately helpful auto-screen brightness adjuster than a super-complicated system that tries to adapt to every possible circumstance, but usually gets it wrong. And is impossible to understand or adjust manually.
