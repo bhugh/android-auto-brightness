@@ -1,4 +1,4 @@
-== NEW IN VERSION 2.22 ==
+## NEW IN VERSION 2.22
 
 * Changed Android internal app name (Note: Will require manual un-install of any previous versions)
 * All screens now landscape-compatible
@@ -7,14 +7,14 @@
 * Retaining settings across reboot should now work consistently
 * Many routine bug fixes
 
-== NEW IN VERSION 2.10 ==
+## NEW IN VERSION 2.10
 
-many new settings, options, bug fixes:
+Many new settings, options, bug fixes:
 
 * New shake options, and disable shake
 * Notify, toast, and sound enable/disable
 * Various bug fixes
 * Name change to Simple Auto Brightness
  
-== NEW IN VERSION 2.02 ==
+## NEW IN VERSION 2.02
 * Added settings page
