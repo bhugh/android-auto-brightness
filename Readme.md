@@ -1,7 +1,7 @@
 
 Simple Auto Brightness - a small, simple app to automatically adjust the Android display brightness. 
 
-Available as a self-standing Android app OR as a Tasker project. [Download the latest release here](https://github.com/bhugh/android-auto-brightness/releases).
+Available as a self-standing Android app OR as a Tasker project. [Download the latest release here](https://github.com/bhugh/android-auto-brightness/releases). [Wiki with QuickStart & Help here](https://github.com/bhugh/android-auto-brightness/wiki).
 
 ![simple-auto-brightness-screenshot-2019-10-18-crop](https://user-images.githubusercontent.com/2321668/67133501-b72b3880-f1d2-11e9-92fc-a808abd084da.png)
 
