@@ -1,5 +1,8 @@
 ## NEW IN VERSION 2.50 
-* Much improved and user-friendly installation procedure
+* Much improved and user-friendlier installation procedure
+   * Automatically brings up dialog boxes for each permission, rather than relying on you to hunt down notifications
+   * Also includes a simpler method for taming the notifications associated with the app
+   * Includes an explanation of the app permissions required and instructions for dealing with the notifications and creating a Quick Settings Tile right on the app Welcome Page on first installation.
 * Information, pop-ups, and screens generally refined and more user-friendly
 * Improved and expanded help, trouble-shooting, and step-by-step installation instructions at the project wiki
 * Fixed a number of bugs
