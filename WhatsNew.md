@@ -1,3 +1,10 @@
+## NEW IN VERSION 2.50 
+* Much improved and user-friendly installation procedure
+* Information, pop-ups, and screens generally refined and more user-friendly
+* Improved and expanded help, trouble-shooting, and step-by-step installation instructions at the project wiki
+* Fixed a number of bugs
+* Thanks to Reddit users at /r/Android /r/Tasker, /r/Apps, /r/taskernet and others for much valuable feedback and ideas to improve the user experience and make the app simpler to use
+
 ## NEW IN VERSION 2.22
 
 * Changed Android internal app name (Note: Will require manual un-install of any previous versions)
